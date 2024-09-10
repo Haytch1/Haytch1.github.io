@@ -172,7 +172,7 @@ main {
     grid-template-columns: 1fr 300px;
     gap: 40px;
     padding: 40px 20px;
-    max width: 1200px;
+    max-width: 1200px;
     margin: 0 auto
 }
 
