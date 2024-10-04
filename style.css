@@ -1,264 +1,110 @@
+/* General styles */
 body {
-    background-color: #F0FFFF;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(lightsalmon, whitesmoke);
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 16px;
-    color: #3A3B3C;
-}
-
-#logo {
-     margin: 0px;
-     padding: 8px;
-    font-family:"Fredoka One", sans-serif;
-}
-
-
-body > header {
-background-color: rgb(184, 71, 71);
-color: antiquewhite;
-display: flex;
-align-items: center;
-justify-content: space-around
-}
-
- .navbutton {
- color: beige;
- text-decoration: none;
- padding: 12px;
- border: 1px solid whitesmoke;
- border-radius: 10%;
- }
-
-
-#nav-ul {
-    display: flex;
-    gap: 20px;
-}
-
-#nav-ul > li {
-    padding: 8px;
-    margin: 16px;
-}
-
-body > footer {
-    background-color: #C19A6B(184, 71, 71) ;
-    color: #BDB76B;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#footer-ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0%;
-}
-
-#footer-ul> div {
-    margin-right: 40px;
-
-}
-
-#footer-ul > div > li {
-    margin-bottom: 12px;
-}
-
-
-#footer-ul > div > li > a{
-    color: aliceblue;
-    text-decoration: none;
-    transition: 0.3 ease;
-}
-
-#footer-ul > div > li > a:hover {
-    color: whitesmoke;
-}
-
-
-#main-content {
-    display: flex;
-    justify-content: space-around;
-}
-
-#main-content > div{
-    width: 70%;
-}
-
-
-#main-content aside {
-    width: 20%;
-}
-
-form {
-background-color: #cb6d51;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0, 4px, 8px rgba(whitesmoke, lightsalmon, grey, alpha);
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #3b2f2f;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form select,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-form input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-form input[type="submit"] {
-    background-color: #5e5a80;
-    color: whitesmoke;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #cc7a8b;
-}
-
-
-footer .bottom {
-    margin-top: 20px;
-    font-size: 0.9em;
-}
-
-header {
-    background-color:#737CA1(184, 71, 71);
-    color: antiquewhite;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-header h1 {
-    font-family: 'Fredoka One', sans-serif;
-    font-size: 2.5em;
     margin: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100vh; /* Full screen height */
+    background: url('Background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff; /* Light text for contrast */
 }
 
 
-nav ul a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.hero h2 {
+    font-size: 3em; /* Large font for hero text */
+    font-family: 'Fredoka One', sans-serif;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 40px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto
+.button {
+    background-color: #ff6f20; /* Vibrant accent color */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1.2em;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-main h2 {
-    color: #504A4B;
-    font-size: 1.8em;
-    margin-bottom: 10px;
+.button:hover {
+    background-color: #ff9f80; /* Lighter shade on hover */
 }
 
-article p, {
-    line-height: 1.75;
-    font-size: 1.1em
-    margin-bottom: 20px;
-    max-width: 800px;
-    color: #CECECE
-}
-
-article {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-aside {
-    max-width: 300px;
+/* Navigation bar */
+nav {
+    background-color: transparent;
     padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    gap: 40px; /* Space between links */
+    list-style: none; /* Remove bullet points */
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700; /* Bold text for navigation */
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5em; /* Larger font for links */
+    font-family: 'Fredoka One', sans-serif;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700; /* Gold on hover */
 }
 
-
-footer p {
-    font-size: 0.9em;
-    color: #827839;
-}
-
-body > header, body > footer {
-    background-color: #404040;
-    color: #f0f0f0;
-}
-
-nav ul li a {
-    color: #f0f0f0;
-    background-color: #505050;
-    border: none;
-}
-
-form input[type="submit"] {
-    background-color: #5e5a80;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #434064;
-    transform: scale(1.05)
-}
-
-article h2, article h3 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
+/* Footer */
 footer {
-    padding: 40px 20px;
-    background-color: #333;
+    background-color: #333; /* Dark footer */
     color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #FFD700;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+h2, h3 {
+    font-family: 'Fredoka One', sans-serif;
 }
 
 
